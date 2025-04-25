@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ancient OCR Web App</title>
+</head>
+<body>
+  <h1>Upload Historical Document Image</h1>
+  <form action="/" method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" required>
+    <button type="submit">Run OCR</button>
+  </form>
+
+  {% if result %}
+    <h2>OCR Output:</h2>
+    <pre>{{ result }}</pre>
+  {% endif %}
+</body>
+</html>
